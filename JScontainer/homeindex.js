@@ -19,9 +19,8 @@ const CommentContainer = () => {
     cOmentContainer.classList.add("cOmentContainer");
 
     const imageProfileContainer = document.createElement("div");
-    const imageContainer = document.createElement("img");
-    imageContainer.src = `${personsComment[0].url}`;
-
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("imageContainer");
     const reviewStars = document.createElement("ul");
     reviewStars.setAttribute("id", "reviewStars");
 

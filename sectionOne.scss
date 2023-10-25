@@ -130,6 +130,14 @@ main {
           display: flex;
           gap: 10px;
 
+          .imageContainer {
+            background-image: url('../images/Ellipse\ 9.png');
+            background-size: contain;
+            width: 66px;
+            height: 66px;
+            border-radius: 50%;
+          }
+
           .nameContainer {
             display: flex;
             flex-direction: column;

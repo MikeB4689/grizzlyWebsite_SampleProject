@@ -112,6 +112,13 @@ main #home #commentContainer .cardInfoContainer .cOmentContainer {
   display: flex;
   gap: 10px;
 }
+main #home #commentContainer .cardInfoContainer .cOmentContainer .imageContainer {
+  background-image: url("../images/Ellipse 9.png");
+  background-size: contain;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
 main #home #commentContainer .cardInfoContainer .cOmentContainer .nameContainer {
   display: flex;
   flex-direction: column;
