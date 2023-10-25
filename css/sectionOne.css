@@ -1,5 +1,4 @@
 main {
-  inset: 0;
   width: 100%;
 }
 main #home {
@@ -21,7 +20,7 @@ main #home #profile #imageContainer {
   background-image: url("../images/05-Joaquin-Revllo-22_0039-Full 1.png");
   width: 100%;
   height: 400px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -100,17 +99,47 @@ main #home #reviews #reviewContainer h1 span {
 main #home #commentContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   width: 100%;
+  padding: 0 10px;
 }
-main #home #commentContainer .cOmentContainer {
+main #home #commentContainer .cardInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main #home #commentContainer .cardInfoContainer .cOmentContainer {
   display: flex;
   gap: 10px;
+}
+main #home #commentContainer .cardInfoContainer .cOmentContainer .nameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main #home #commentContainer .cardInfoContainer .cOmentContainer .nameContainer p:nth-child(2) {
+  margin-top: -10px;
+  font-size: 12px;
+}
+main #home #commentContainer .cardInfoContainer #reviewStars {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+main #home #commentContainer .cardInfoContainer #reviewStars li {
+  list-style-type: none;
+  color: #f7941d;
+}
+main #home #outcome {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 main #home #outcome ul {
   background-color: green;
   display: flex;
   flex-direction: column;
+  padding: 0 10px;
   gap: 20px;
 }
 main #home #outcome ul li {
@@ -119,8 +148,8 @@ main #home #outcome ul li {
   gap: 20px;
 }
 main #home #outcome ul li p {
-  border: 2px solid black;
-  width: 40px;
+  border: 3px solid #f7941d;
+  width: 20px;
   height: 20px;
   border-radius: 50%;
   position: relative;
@@ -132,27 +161,90 @@ main #home #outcome ul li p::after {
   background-color: #f7941d;
   position: absolute;
   border-radius: 50%;
+  top: 15%;
+  left: 20%;
 }
-main #home #outcome ul li p::after span {
+main #home #outcome ul li span {
   font-size: 12px;
   width: 80%;
 }
-main #home #outcome ul li .outcomeContainer {
+main #home #outcome .outcomeContainer {
   width: 100%;
 }
-main #home #outcome ul li .outcomeContainer .outComeImage {
+main #home #outcome .outcomeContainer .outComeImage {
   width: 100%;
   height: 317.76px;
   background-image: url("../images/Rectangle 653.png");
   background-size: cover;
   background-position: center;
 }
-main #home #outcome ul li .outcomeContainer .outComeImageDescription p {
+main #home #outcome .outcomeContainer .outComeImageDescription {
+  padding: 0 10px;
+}
+main #home #outcome .outcomeContainer .outComeImageDescription p {
   font-size: 14px;
   letter-spacing: 2px;
   word-spacing: 1px;
 }
-main #home #outcome ul li .outcomeContainer .outComeImageDescription p span {
+main #home #outcome .outcomeContainer .outComeImageDescription p span {
   font-size: 35px;
   color: #f7941d;
+}
+main #home #trainingInclude {
+  display: flex;
+  flex-direction: column;
+}
+main #home #trainingInclude h1 {
+  text-align: center;
+  font-size: 25px;
+}
+main #home #trainingInclude h1 span {
+  color: #f7941d;
+}
+main #home #trainingInclude .trainingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main #home #trainingInclude .trainingContainer .trainingImage {
+  background-image: url("../images/image_18__1_-removebg-preview 1.png");
+  width: 100%;
+  height: 190px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #home #trainingInclude .trainingContainer ul {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  gap: 20px;
+}
+main #home #trainingInclude .trainingContainer ul li {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+main #home #trainingInclude .trainingContainer ul li p {
+  border: 3px solid #f7941d;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+}
+main #home #trainingInclude .trainingContainer ul li p::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f7941d;
+  position: absolute;
+  border-radius: 50%;
+  top: 15%;
+  left: 20%;
+}
+main #home #trainingInclude .trainingContainer ul li span {
+  font-size: 12px;
+  width: 80%;
 }/*# sourceMappingURL=sectionOne.css.map */

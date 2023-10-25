@@ -1,4 +1,5 @@
 const reviewComment = document.querySelector("#commentContainer");
+
 console.log(reviewComment);
 const personsComment = [
   {
@@ -11,6 +12,9 @@ const personsComment = [
 
 const CommentContainer = () => {
   for (i = 0; i < 5; i++) {
+    const cardInfoContainer = document.createElement("div");
+    cardInfoContainer.classList.add("cardInfoContainer");
+
     const cOmentContainer = document.createElement("div");
     cOmentContainer.classList.add("cOmentContainer");
 
@@ -21,16 +25,8 @@ const CommentContainer = () => {
     const reviewStars = document.createElement("ul");
     reviewStars.setAttribute("id", "reviewStars");
 
-    for (i = 0; i < 5; i++) {
-      const starReview = document.createElement("li");
-      const starS = document.createElement("i");
-      starS.setAttribute("class", "bx bxs-star");
-      starReview.appendChild(starS);
-      reviewStars.appendChild(starReview);
-    }
-
     const nameContainer = document.createElement("div");
-
+    nameContainer.classList.add("nameContainer");
     const fullName = document.createElement("p");
     fullName.innerText = `${personsComment[0].name}`;
 
@@ -38,7 +34,7 @@ const CommentContainer = () => {
     useName.innerText = `@${personsComment[0].name} 2days ago`;
 
     const contentContainer = document.createElement("p");
-    contentContainer.innerText = `@${personsComment[0].comment}`;
+    contentContainer.innerText = `${personsComment[0].comment}`;
 
     cOmentContainer.appendChild(imageProfileContainer);
     imageProfileContainer.appendChild(imageContainer);
@@ -48,9 +44,23 @@ const CommentContainer = () => {
     nameContainer.appendChild(useName);
     nameContainer.appendChild(contentContainer);
 
-    reviewComment.appendChild(cOmentContainer);
-    reviewComment.appendChild(reviewStars);
+    cardInfoContainer.appendChild(cOmentContainer);
+    cardInfoContainer.appendChild(reviewStars);
+
+    reviewComment.appendChild(cardInfoContainer);
   }
+  const reviewContainer = document.querySelectorAll("#reviewStars");
+  reviewContainer.forEach((element) => {
+    for (i = 0; i < 5; i++) {
+      const reviewList = document.createElement("li");
+      const starRating = document.createElement("i");
+      starRating.setAttribute("class", "bx bxs-star");
+      reviewList.appendChild(starRating);
+      element.appendChild(reviewList);
+    }
+
+    console.log(element);
+  });
 };
 
 CommentContainer();
