@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  background-color: blue;
+}
+
+.container {
+  margin: 0 auto;
+  background-color: #000000;
+  width: 255px;
+  height: auto;
+}
+.container header {
+  display: flex;
+  align-items: center;
+  background-color: #b21b20;
+  width: 255px;
+  height: 88.88px;
+  top: 0;
+}
+.container header .logo {
+  width: 61.49px;
+  height: 61.49px;
+  background-image: url("../images/Grizzly Smaller (1) 2.png");
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,158 @@
+main {
+  inset: 0;
+  width: 100%;
+}
+main #home {
+  overflow-x: hidden;
+  background-color: rgb(171, 108, 108);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: auto;
+}
+main #home #profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main #home #profile #imageContainer {
+  background-image: url("../images/05-Joaquin-Revllo-22_0039-Full 1.png");
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main #home #profile #profileContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #home #profile #profileContent h2 {
+  font-size: 25px;
+  font-weight: 900;
+}
+main #home #profile #profileContent p {
+  font-size: 14px;
+  line-height: 20px;
+}
+main #home #profile #profileContent h2:nth-last-child(2) {
+  line-height: 40px;
+  color: red;
+  font-size: 25px;
+  font-weight: 900;
+  color: white;
+  position: relative;
+}
+main #home #profile #profileContent h2:nth-last-child(2)::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #f7941d;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main #home #profile #profileContent button {
+  margin-top: 10px;
+  width: 150px;
+  height: 50px;
+  border-radius: 59px;
+  background-color: #f7941d;
+  border-color: #f7941d;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+main #home #reviews ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+main #home #reviews ul li {
+  list-style: none;
+  font-size: 25px;
+}
+main #home #reviews ul li i {
+  color: #f7941d;
+}
+main #home #reviews #reviewContainer {
+  width: 100%;
+}
+main #home #reviews #reviewContainer h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  font-family: 900;
+  color: #f7941d;
+}
+main #home #reviews #reviewContainer h1 span {
+  height: 100%;
+  font-size: 14px;
+  color: white;
+}
+main #home #commentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+main #home #commentContainer .cOmentContainer {
+  display: flex;
+  gap: 10px;
+}
+main #home #outcome ul {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main #home #outcome ul li {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+main #home #outcome ul li p {
+  border: 2px solid black;
+  width: 40px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+}
+main #home #outcome ul li p::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f7941d;
+  position: absolute;
+  border-radius: 50%;
+}
+main #home #outcome ul li p::after span {
+  font-size: 12px;
+  width: 80%;
+}
+main #home #outcome ul li .outcomeContainer {
+  width: 100%;
+}
+main #home #outcome ul li .outcomeContainer .outComeImage {
+  width: 100%;
+  height: 317.76px;
+  background-image: url("../images/Rectangle 653.png");
+  background-size: cover;
+  background-position: center;
+}
+main #home #outcome ul li .outcomeContainer .outComeImageDescription p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+}
+main #home #outcome ul li .outcomeContainer .outComeImageDescription p span {
+  font-size: 35px;
+  color: #f7941d;
+}/*# sourceMappingURL=sectionOne.css.map */
