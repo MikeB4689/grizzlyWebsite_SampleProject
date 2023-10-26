@@ -1,0 +1,123 @@
+#JoinFbgroup {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  gap: 20px;
+}
+#JoinFbgroup .spacerContainer {
+  width: 100%;
+  height: 90px;
+}
+#JoinFbgroup .joinGroup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#JoinFbgroup .joinGroup-container h1 {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+#JoinFbgroup .joinGroup-container h1 span {
+  color: #EE3524;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-row-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-row1 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-row1 .joinGroup-image {
+  list-style: none;
+  width: 100%;
+  height: 150px;
+  background-image: url("../images/joinGroup-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-row1 .joinGroup-image .playbutton {
+  width: 55px;
+  height: 55px;
+  background-image: url("../images/Group 35542.png");
+  background-size: contain;
+  z-index: 1;
+  position: absolute;
+  top: 25%;
+  left: 37%;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph p {
+  font-size: 12px;
+  color: black;
+  opacity: 80%;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul li {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: start;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul li .list-image {
+  width: 32px;
+  height: 32px;
+  background-image: url("../images/carbon_condition-point.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul li p {
+  font-size: 12px;
+  color: black;
+  opacity: 80%;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-accordion ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-accordion ul li {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container {
+  display: flex;
+  flex-direction: column;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container h3 {
+  font-size: 18px;
+  color: black;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container p {
+  overflow: hidden;
+  color: black;
+  height: 0;
+  transition: 0.5s ease-in;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container p.active {
+  height: 250px;
+}
+#JoinFbgroup .joinGroup-container .joinGroup-accordion ul li span {
+  color: black;
+  font-size: 20px;
+  font-weight: 800;
+}/*# sourceMappingURL=JoinFbgroup.css.map */

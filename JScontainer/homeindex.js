@@ -1,5 +1,4 @@
-const reviewComment = document.querySelector("#commentContainer");
-
+const reviewComment = document.querySelectorAll(".commentContainer");
 console.log(reviewComment);
 const personsComment = [
   {
@@ -11,43 +10,45 @@ const personsComment = [
 ];
 
 const CommentContainer = () => {
-  for (i = 0; i < 5; i++) {
-    const cardInfoContainer = document.createElement("div");
-    cardInfoContainer.classList.add("cardInfoContainer");
+  reviewComment.forEach((reviews) => {
+    for (i = 0; i < 5; i++) {
+      const cardInfoContainer = document.createElement("div");
+      cardInfoContainer.classList.add("cardInfoContainer");
 
-    const cOmentContainer = document.createElement("div");
-    cOmentContainer.classList.add("cOmentContainer");
+      const cOmentContainer = document.createElement("div");
+      cOmentContainer.classList.add("cOmentContainer");
 
-    const imageProfileContainer = document.createElement("div");
-    const imageContainer = document.createElement("div");
-    imageContainer.classList.add("imageContainer");
-    const reviewStars = document.createElement("ul");
-    reviewStars.setAttribute("id", "reviewStars");
+      const imageProfileContainer = document.createElement("div");
+      const imageContainer = document.createElement("div");
+      imageContainer.classList.add("imageContainer");
+      const reviewStars = document.createElement("ul");
+      reviewStars.setAttribute("id", "reviewStars");
 
-    const nameContainer = document.createElement("div");
-    nameContainer.classList.add("nameContainer");
-    const fullName = document.createElement("p");
-    fullName.innerText = `${personsComment[0].name}`;
+      const nameContainer = document.createElement("div");
+      nameContainer.classList.add("nameContainer");
+      const fullName = document.createElement("p");
+      fullName.innerText = `${personsComment[0].name}`;
 
-    const useName = document.createElement("p");
-    useName.innerText = `@${personsComment[0].name} 2days ago`;
+      const useName = document.createElement("p");
+      useName.innerText = `@${personsComment[0].name} 2days ago`;
 
-    const contentContainer = document.createElement("p");
-    contentContainer.innerText = `${personsComment[0].comment}`;
+      const contentContainer = document.createElement("p");
+      contentContainer.innerText = `${personsComment[0].comment}`;
 
-    cOmentContainer.appendChild(imageProfileContainer);
-    imageProfileContainer.appendChild(imageContainer);
+      cOmentContainer.appendChild(imageProfileContainer);
+      imageProfileContainer.appendChild(imageContainer);
 
-    cOmentContainer.appendChild(nameContainer);
-    nameContainer.appendChild(fullName);
-    nameContainer.appendChild(useName);
-    nameContainer.appendChild(contentContainer);
+      cOmentContainer.appendChild(nameContainer);
+      nameContainer.appendChild(fullName);
+      nameContainer.appendChild(useName);
+      nameContainer.appendChild(contentContainer);
 
-    cardInfoContainer.appendChild(cOmentContainer);
-    cardInfoContainer.appendChild(reviewStars);
+      cardInfoContainer.appendChild(cOmentContainer);
+      cardInfoContainer.appendChild(reviewStars);
 
-    reviewComment.appendChild(cardInfoContainer);
-  }
+      reviews.appendChild(cardInfoContainer);
+    }
+  });
   const reviewContainer = document.querySelectorAll("#reviewStars");
   reviewContainer.forEach((element) => {
     for (i = 0; i < 5; i++) {
@@ -57,8 +58,6 @@ const CommentContainer = () => {
       reviewList.appendChild(starRating);
       element.appendChild(reviewList);
     }
-
-    console.log(element);
   });
 };
 

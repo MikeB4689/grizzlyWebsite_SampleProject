@@ -4,7 +4,7 @@ main {
 
   #home {
     overflow-x: hidden;
-
+    padding-top: 100px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@ main {
       }
     }
 
-    #commentContainer {
+    .commentContainer {
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -133,15 +133,18 @@ main {
           .imageContainer {
             background-image: url('../images/Ellipse\ 9.png');
             background-size: contain;
-            width: 66px;
-            height: 66px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
           }
 
           .nameContainer {
+
             display: flex;
             flex-direction: column;
+
             gap: 10px;
+
 
             p:nth-child(2) {
               margin-top: -10px;
@@ -172,6 +175,11 @@ main {
 
       gap: 20px;
 
+      h1 {
+        text-align: center;
+        font-weight: 900;
+      }
+
       ul {
 
         display: flex;
@@ -183,8 +191,10 @@ main {
           list-style: none;
           display: flex;
           gap: 20px;
+          flex-wrap: wrap;
 
           p {
+
             border: 3px solid #f7941d;
             width: 20px;
             height: 20px;
@@ -199,14 +209,16 @@ main {
             background-color: #f7941d;
             position: absolute;
             border-radius: 50%;
-            top: 15%;
-            left: 20%;
+            top: 14%;
+            left: 15%;
 
           }
 
           span {
-            font-size: 12px;
+
             width: 80%;
+            font-size: 12px;
+
           }
         }
       }
@@ -217,6 +229,7 @@ main {
         gap: 20px;
         width: 100%;
         padding: 0 10px;
+
 
 
 
@@ -288,6 +301,8 @@ main {
           padding: 0 10px;
           gap: 20px;
 
+          padding-bottom: 60px;
+
           li {
             list-style: none;
             display: flex;
@@ -308,9 +323,8 @@ main {
               background-color: #f7941d;
               position: absolute;
               border-radius: 50%;
-              top: 15%;
-              left: 20%;
-
+              top: 14%;
+              left: 15%;
             }
 
             span {

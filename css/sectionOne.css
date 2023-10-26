@@ -3,6 +3,7 @@ main {
 }
 main #home {
   overflow-x: hidden;
+  padding-top: 100px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -94,44 +95,44 @@ main #home #reviews #reviewContainer h1 span {
   font-size: 14px;
   color: white;
 }
-main #home #commentContainer {
+main #home .commentContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
   padding: 0 10px;
 }
-main #home #commentContainer .cardInfoContainer {
+main #home .commentContainer .cardInfoContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-main #home #commentContainer .cardInfoContainer .cOmentContainer {
+main #home .commentContainer .cardInfoContainer .cOmentContainer {
   display: flex;
   gap: 10px;
 }
-main #home #commentContainer .cardInfoContainer .cOmentContainer .imageContainer {
+main #home .commentContainer .cardInfoContainer .cOmentContainer .imageContainer {
   background-image: url("../images/Ellipse 9.png");
   background-size: contain;
-  width: 66px;
-  height: 66px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
 }
-main #home #commentContainer .cardInfoContainer .cOmentContainer .nameContainer {
+main #home .commentContainer .cardInfoContainer .cOmentContainer .nameContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-main #home #commentContainer .cardInfoContainer .cOmentContainer .nameContainer p:nth-child(2) {
+main #home .commentContainer .cardInfoContainer .cOmentContainer .nameContainer p:nth-child(2) {
   margin-top: -10px;
   font-size: 12px;
 }
-main #home #commentContainer .cardInfoContainer #reviewStars {
+main #home .commentContainer .cardInfoContainer #reviewStars {
   display: flex;
   justify-content: center;
   gap: 5px;
 }
-main #home #commentContainer .cardInfoContainer #reviewStars li {
+main #home .commentContainer .cardInfoContainer #reviewStars li {
   list-style-type: none;
   color: #f7941d;
 }
@@ -139,6 +140,10 @@ main #home #outcome {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+main #home #outcome h1 {
+  text-align: center;
+  font-weight: 900;
 }
 main #home #outcome ul {
   display: flex;
@@ -150,6 +155,7 @@ main #home #outcome ul li {
   list-style: none;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 main #home #outcome ul li p {
   border: 3px solid #f7941d;
@@ -165,12 +171,12 @@ main #home #outcome ul li p::after {
   background-color: #f7941d;
   position: absolute;
   border-radius: 50%;
-  top: 15%;
-  left: 20%;
+  top: 14%;
+  left: 15%;
 }
 main #home #outcome ul li span {
-  font-size: 12px;
   width: 80%;
+  font-size: 12px;
 }
 main #home #outcome .outcomeContainer {
   display: flex;
@@ -231,6 +237,7 @@ main #home #trainingInclude .trainingContainer ul {
   flex-direction: column;
   padding: 0 10px;
   gap: 20px;
+  padding-bottom: 60px;
 }
 main #home #trainingInclude .trainingContainer ul li {
   list-style: none;
@@ -251,8 +258,8 @@ main #home #trainingInclude .trainingContainer ul li p::after {
   background-color: #f7941d;
   position: absolute;
   border-radius: 50%;
-  top: 15%;
-  left: 20%;
+  top: 14%;
+  left: 15%;
 }
 main #home #trainingInclude .trainingContainer ul li span {
   font-size: 12px;
