@@ -1010,11 +1010,12 @@ body .container header .timeContainer .timeFrame {
 @media only screen and (min-width: 780px) {
   body .container main #home {
     padding: 0 80px;
-    gap: 50px;
+    gap: 80px;
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: auto;
   }
   body .container main #home .spacerContainer {
@@ -1159,6 +1160,7 @@ body .container header .timeContainer .timeFrame {
     gap: 10px;
     width: 100%;
     padding: 0 10px;
+    width: 980px;
   }
   body .container main #home .commentContainer .right-arrow,
   body .container main #home .commentContainer .left-arrow {
@@ -1315,6 +1317,7 @@ body .container header .timeContainer .timeFrame {
   body .container main #home #trainingInclude .trainingContainer {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 40px;
   }
   body .container main #home #trainingInclude .trainingContainer .trainingImage {
@@ -1333,7 +1336,7 @@ body .container header .timeContainer .timeFrame {
   body .container main #home #trainingInclude .trainingContainer ul li {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 40px;
   }
   body .container main #home #trainingInclude .trainingContainer ul li p {
     border: 3px solid #f7941d;
@@ -1891,8 +1894,8 @@ body .container header .timeContainer .timeFrame {
   body .container main #comnunity {
     display: flex;
     flex-direction: column;
-    gap: 60ox;
-    padding: 0 100px;
+    gap: 60px;
+    padding: 0 180px;
   }
   body .container main #comnunity .spacerContainer {
     width: 100%;
@@ -2251,6 +2254,7 @@ body .container header .timeContainer .timeFrame {
     gap: 10px;
     width: 100%;
     padding: 0 10px;
+    width: 980px;
   }
   body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .right-arrow,
   body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .left-arrow {

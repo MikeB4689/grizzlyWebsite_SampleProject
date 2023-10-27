@@ -1443,13 +1443,13 @@ body {
 
         #home {
           padding: 0 80px;
-          gap: 50px;
+          gap: 80px;
           position: relative;
 
           width: 100%;
           display: flex;
           flex-direction: column;
-
+          align-items: center;
           height: auto;
 
 
@@ -1633,6 +1633,8 @@ body {
             gap: 10px;
             width: 100%;
             padding: 0 10px;
+            width: 980px;
+
 
             .right-arrow,
             .left-arrow {
@@ -1851,6 +1853,7 @@ body {
             .trainingContainer {
               display: flex;
               flex-direction: row;
+              justify-content: center;
               gap: 40px;
 
               .trainingImage {
@@ -1874,7 +1877,7 @@ body {
                 li {
                   list-style: none;
                   display: flex;
-                  gap: 20px;
+                  gap: 40px;
 
                   p {
                     border: 3px solid #f7941d;
@@ -2623,8 +2626,8 @@ body {
         #comnunity {
           display: flex;
           flex-direction: column;
-          gap: 60ox;
-          padding: 0 100px;
+          gap: 60px;
+          padding: 0 180px;
 
           .spacerContainer {
             width: 100%;
@@ -3110,6 +3113,8 @@ body {
                   gap: 10px;
                   width: 100%;
                   padding: 0 10px;
+                  width: 980px;
+
 
                   .right-arrow,
                   .left-arrow {

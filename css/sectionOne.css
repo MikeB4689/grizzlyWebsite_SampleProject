@@ -69,6 +69,10 @@ main #home #profile #profileContent button {
   text-transform: uppercase;
   font-weight: 700;
 }
+main #home #profile #profileContent button a {
+  text-decoration: none;
+  color: white;
+}
 main #home #reviews ul {
   display: flex;
   align-items: center;
