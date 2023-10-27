@@ -391,15 +391,20 @@
   background-repeat: no-repeat;
   position: relative;
 }
-#comnunity .row5 .row5-container .row5-image .playbutton {
+#comnunity .row5 .row5-container .row5-image .playButtonContainer {
+  width: 100;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+#comnunity .row5 .row5-container .row5-image .playButtonContainer .playbutton {
   width: 55px;
   height: 55px;
   background-image: url("../images/Group 35542.png");
-  background-size: contain;
+  background-size: cover;
   z-index: 1;
-  position: absolute;
-  top: 25%;
-  left: 37%;
 }
 #comnunity .row5 .row5-container .row5-description {
   display: flex;

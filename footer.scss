@@ -2,13 +2,16 @@ footer {
 
     position: relative;
     isolation: isolate;
+    border: black;
 
+    outline: black;
 
     svg {
-        width: 680px;
+        width: 1200px;
+
         position: absolute;
-        top: -720px;
-        z-index: 1;
+        top: -119px;
+        z-index: -1;
         transform: translateX(-220px);
 
 
@@ -24,6 +27,10 @@ footer {
         align-items: center;
         justify-content: center;
 
+        border: none;
+
+        outline: black;
+
         .footer-logo {
             .logo-footer {
                 width: 148px;
@@ -31,6 +38,7 @@ footer {
                 background-image: url('../images/Grizzly\ Smaller\ \(1\)\ 2.png');
                 background-repeat: no-repeat;
                 background-size: contain;
+
             }
         }
 

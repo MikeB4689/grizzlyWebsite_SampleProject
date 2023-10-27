@@ -1,4 +1,5 @@
 #JoinFbgroup {
+  z-index: 999;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -108,15 +109,19 @@
   color: black;
 }
 #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   color: black;
   height: 0;
-  transition: 0.5s ease-in;
+  transition: 0.5s ease-in-out;
 }
 #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container p.active {
-  height: 250px;
+  height: 180px;
 }
 #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li span {
+  cursor: pointer;
   color: black;
   font-size: 20px;
   font-weight: 800;

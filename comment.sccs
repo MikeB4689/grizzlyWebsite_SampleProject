@@ -1,0 +1,91 @@
+   .commentContainer {
+            min-width: 960px;
+            height: 181.14px;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            padding: 0 40px;
+
+
+            .right-arrow,
+            .left-arrow {
+                background-color: #f7941d;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 99;
+                opacity: 30%;
+                cursor: pointer;
+                transition: 0.5s ease-in-out;
+
+                i {
+                    font-size: 60px;
+                    font-weight: 700;
+                }
+
+            }
+
+            .right-arrow:hover,
+            .left-arrow:hover {
+                opacity: 100%;
+            }
+
+            .right-arrow {
+                top: 30%;
+                left: 5%;
+
+            }
+
+            .left-arrow {
+                top: 30%;
+                right: 5%;
+            }
+
+
+
+            .cardInfoContainer {
+                flex: 1 0 364.72px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .cOmentContainer {
+                    display: flex;
+                    gap: 10px;
+
+                    .imageContainer {
+                        background-image: url('../images/Ellipse\ 9.png');
+                        background-size: contain;
+                        width: 55px;
+                        height: 55px;
+                        border-radius: 50%;
+                    }
+
+                    .nameContainer {
+
+                        display: flex;
+                        flex-direction: column;
+
+                        gap: 10px;
+
+
+                        p:nth-child(2) {
+                            margin-top: -10px;
+                            font-size: 12px;
+                        }
+                    }
+
+                }
+
+                #reviewStars {
+                    display: flex;
+                    justify-content: center;
+                    gap: 5px;
+
+                    li {
+                        list-style-type: none;
+                        color: #f7941d;
+                    }
+                }
+            }
+
+        }

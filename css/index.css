@@ -6,6 +6,7 @@
 }
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-padding, 50px);
 }
@@ -23,40 +24,2555 @@ html {
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  overflow-x: hidden;
   font-family: "Inter", sans-serif;
   color: #ffffff;
-  background-color: blue;
+  background-color: red;
+  overflow: hidden;
 }
-
-.container {
-  overflow-x: hidden;
-  margin: 0 auto;
+body .container {
   background-color: #000000;
-  width: 255px;
+  min-width: 255px;
   height: auto;
+  isolation: isolate;
+  position: relative;
 }
-.container header {
+body .container header {
+  padding: 10px 0px;
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
   position: fixed;
   background-color: #b21b20;
-  width: 255px;
+  width: 100%;
   height: 88.88px;
   top: 0;
-  z-index: 1;
+  z-index: 9999;
+  gap: 5px;
+  justify-content: center;
 }
-.container header h3 {
-  font-size: 14px;
-}
-.container header .logo {
-  width: 61.49px;
-  height: 61.49px;
-  background-image: url("../images/Grizzly Smaller (1) 2.png");
-}
-.container header .timeFrame {
+body .container header h3 {
   font-size: 12px;
+}
+body .container header .logo {
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/Grizzly Smaller (1) 2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+body .container header .timeContainer {
+  display: flex;
+}
+body .container header .timeContainer .timeFrame {
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 460px) {
+  body .container header {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  body .container header h3 {
+    font-size: 16px;
+  }
+  body .container header .logo {
+    width: 66px;
+    height: 66px;
+  }
+  body .container header .timeContainer {
+    display: flex;
+  }
+  body .container header .timeContainer .timeFrame {
+    font-size: 16px;
+  }
+  body .container main #home {
+    padding: 0 80px;
+  }
+  body .container main #home #imageContainer {
+    background-position: center;
+  }
+  body .container main #bonuses {
+    padding: 0 80px;
+  }
+  body .container main #bonuses .spacerContainer {
+    width: 100%;
+    height: 100px;
+  }
+  body .container main #educational {
+    padding: 0 80px;
+  }
+  body .container main #educational .joaquinImage {
+    background-position: center;
+  }
+  body .container main #trainings {
+    padding: 0 80px;
+  }
+  body .container main #comnunity {
+    padding: 0 80px;
+  }
+  body .container main #JoinFbgroup {
+    padding: 0 80px;
+  }
+}
+@media only screen and (min-width: 560px) {
+  body .container main #home {
+    padding: 0 80px;
+  }
+  body .container main #home #profile {
+    flex-direction: row;
+  }
+  body .container main #home #profile #imageContainer {
+    background-size: contain;
+  }
+  body .container main #home #profile #profileContent {
+    gap: 10px;
+  }
+  body .container main #home #profile #profileContent h2 {
+    font-size: 30px;
+  }
+  body .container main #home #profile #profileContent p {
+    font-size: 12px;
+  }
+  body .container main #home #reviews ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  body .container main #home #reviews ul li {
+    list-style: none;
+  }
+  body .container main #home #reviews ul li i {
+    color: #f7941d;
+    font-size: 60px;
+  }
+  body .container main #home #reviews #reviewContainer {
+    width: 100%;
+  }
+  body .container main #home #reviews #reviewContainer h1 {
+    font-size: 54px;
+  }
+  body .container main #home #reviews #reviewContainer h1 span {
+    font-size: 24px;
+  }
+  body .container main #home #outcome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  body .container main #home #outcome .outcome-countainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    gap: 10px;
+  }
+  body .container main #home #outcome .outcome-countainer h1 {
+    text-align: center;
+    font-weight: 900;
+  }
+  body .container main #home #outcome .outcome-countainer #outcomeList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #home #outcome .outcome-countainer #outcomeList li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    gap: 5px;
+  }
+  body .container main #home #outcome .outcome-countainer #outcomeList li p {
+    border: 3px solid #f7941d;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+  }
+  body .container main #home #outcome .outcome-countainer #outcomeList li p::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #f7941d;
+    position: absolute;
+    border-radius: 50%;
+    top: 14%;
+    left: 15%;
+  }
+  body .container main #home #outcome .outcome-countainer #outcomeList li span {
+    padding-left: 20px;
+    width: 80%;
+    font-size: 10px;
+  }
+  body .container main #home #outcome .outcomeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  body .container main #home #outcome .outcomeContainer .outComeImage {
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/Rectangle 653.png");
+    background-size: contain;
+    background-position: center;
+    border-radius: 11px;
+    background-repeat: no-repeat;
+  }
+  body .container main #home #outcome .outcomeContainer .outComeImageDescription {
+    padding: 0 10px;
+  }
+  body .container main #home #outcome .outcomeContainer .outComeImageDescription p {
+    font-size: 14px;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+  }
+  body .container main #home #outcome .outcomeContainer .outComeImageDescription p span {
+    font-size: 35px;
+    color: #f7941d;
+  }
+  body .container main #home #trainingInclude {
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20;
+    padding: 0 10px;
+  }
+  body .container main #home #trainingInclude h1 {
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    height: 100px;
+  }
+  body .container main #home #trainingInclude h1 span {
+    color: #f7941d;
+  }
+  body .container main #home #trainingInclude .trainingContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body .container main #home #trainingInclude .trainingContainer .trainingImage {
+    background-image: url("../images/image_18__1_-removebg-preview 1.png");
+    width: 615.02px;
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  body .container main #home #trainingInclude .trainingContainer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 60px;
+  }
+  body .container main #home #trainingInclude .trainingContainer ul li {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  body .container main #home #trainingInclude .trainingContainer ul li p {
+    border: 3px solid #f7941d;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+  }
+  body .container main #home #trainingInclude .trainingContainer ul li p::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #f7941d;
+    position: absolute;
+    border-radius: 50%;
+    top: 14%;
+    left: 15%;
+  }
+  body .container main #home #trainingInclude .trainingContainer ul li span {
+    font-size: 12px;
+    width: 80%;
+  }
+  body .container main #bonuses {
+    width: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #bonuses #bonusTitle {
+    padding: 0 10px;
+    width: 100%;
+    height: 65px;
+    color: black;
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+  }
+  body .container main #bonuses #bonusTitle span {
+    color: #EE3524;
+  }
+  body .container main #bonuses .bonusesContainers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    gap: 20px;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider {
+    width: 100%;
+    height: 194.88px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col1 h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(39, 38, 38);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col1 h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 8px;
+    color: rgb(39, 38, 38);
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col2 h1 {
+    text-align: center;
+    color: #EE3524;
+    font-size: 18px;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col2 h1 span {
+    color: black;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col2 p {
+    font-size: 12px;
+    color: #000000;
+    opacity: 70%;
+    padding: 0 10px;
+    line-height: 15px;
+  }
+  body .container main #educational {
+    padding: 0 80px;
+  }
+  body .container main #educational .joaquinImage {
+    background-position: center;
+  }
+  body .container main #trainings .row2cardInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #trainings .row2cardInput .row2input {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  body .container main #trainings .row2cardInput .row2input label {
+    font-size: 16px;
+  }
+  body .container main #trainings .row2cardInput .row2input input {
+    width: 100%;
+    height: 55px;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 10px;
+  }
+  body .container main #trainings .row2cardInput .inputCardinfo {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
+  body .container main #trainings .row2cardInput .inputCardinfo label {
+    font-size: 16px;
+  }
+  body .container main #trainings .row2cardInput .inputCardinfo ul {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    align-items: center;
+  }
+  body .container main #trainings .row2cardInput .inputCardinfo ul li {
+    list-style: none;
+  }
+  body .container main #trainings .row2cardInput .inputCardinfo ul input {
+    width: 100%;
+    height: 55px;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  body .container main #trainings .row2cardInput .inputCardinfo ul li:nth-child(2) {
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/credit-card 1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  body .container main #comnunity {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 40px;
+  }
+  body .container main #comnunity .spacerContainer {
+    width: 100%;
+    height: 100px;
+  }
+  body .container main #comnunity .comnunityTitle h1 {
+    font-size: 20px;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+  }
+  body .container main #comnunity .comnunityTitle h1 span {
+    color: #EE3524;
+  }
+  body .container main #comnunity .row1-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1-image-profile {
+    width: 250.84px;
+    height: 306.89px;
+    background-image: url("../images/Rectangle 658.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    isolation: isolate;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1-image-profile .playButtonContainer {
+    width: 451.84px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1-image-profile .playButtonContainer .playButtonContainer {
+    width: 451.84px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1-image-profile .playButtonContainer .playButtonContainer .playbutton {
+    width: 55px;
+    height: 55px;
+    background-image: url("../images/Group 35542.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1-image-profile::after {
+    content: "";
+    background-color: white;
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    z-index: -1;
+    top: 25%;
+    left: 37%;
+    border-radius: 50%;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List {
+    max-width: 515px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(1) .li-image {
+    width: 53.82px;
+    height: 53.82px;
+    background: url("../images/Ellipse 782 (1).png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(1) .li-name p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(1) .li-name span {
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(2) {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(2) ul {
+    display: flex;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(2) ul li {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(2) ul li i {
+    color: #EE3524;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(3) {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(3) p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  body .container main #comnunity .row1-container .row1-col1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1-image-profile {
+    width: 250px;
+    height: 200.89px;
+    background-image: url("../images/Rectangle 659.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    isolation: isolate;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1-image-profile .playButtonContainer {
+    width: 451.84px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1-image-profile .playButtonContainer .playbutton {
+    width: 55px;
+    height: 55px;
+    background-image: url("../images/Group 35542.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(1) .li-image {
+    width: 53.82px;
+    height: 53.82px;
+    background: url("../images/Ellipse 782.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(1) .li-name p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(1) .li-name span {
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(2) {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(2) ul {
+    margin-top: -10px;
+    display: flex;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(2) ul li {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(2) ul li i {
+    color: #EE3524;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(3) {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(3) p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  body .container main #comnunity .row2 {
+    width: 100%;
+    padding: 0 10px;
+  }
+  body .container main #comnunity .row2 ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(1) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(1) .row2-li-image {
+    width: 104.13px;
+    height: 104.13px;
+    background-image: url("../images/row2-image.png");
+    background-size: contain;
+    list-style-type: none;
+    background-repeat: no-repeat;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(1) p {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: white;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(1) p:nth-child(3) {
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(2) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(2) .row2-li-image {
+    width: 104.13px;
+    height: 104.13px;
+    background-image: url("../images/Ellipse 782 (2).png");
+    background-size: contain;
+    list-style-type: none;
+    background-repeat: no-repeat;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(2) p {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: white;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(2) p:nth-child(3) {
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row3 .row3-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .container main #comnunity .row3 .row3-title h3 {
+    font-weight: 800;
+  }
+  body .container main #comnunity .row3 .row3-title p {
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row3 .row3-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  body .container main #comnunity .row3 .row3-paragraph p {
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row4 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  body .container main #comnunity .row4 h1 {
+    text-align: center;
+    font-size: 20px;
+  }
+  body .container main #comnunity .row4 h1 span {
+    color: #EE3524;
+  }
+  body .container main #comnunity .row4 .row4-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-col1 {
+    flex-direction: row;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-col1 .row4-image {
+    flex: 1 0 200px;
+    height: 250px;
+    background-image: url("../images/Rectangle 660.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-col1 .row4-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-col1 .row4-paragraph h3 {
+    text-align: center;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-col1 .row4-paragraph p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments {
+    list-style: none;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
+    overflow-x: hidden;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer .cOmentContainer {
+    display: flex;
+    gap: 10px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer .cOmentContainer .imageContainer {
+    background-image: url("../images/Ellipse 9.png");
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer .cOmentContainer .nameContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer .cOmentContainer .nameContainer p:nth-child(2) {
+    margin-top: -10px;
+    font-size: 12px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer #reviewStars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer #reviewStars li {
+    list-style-type: none;
+    color: #f7941d;
+  }
+  body .container main #comnunity .row5 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row5 .row5-container {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-title h1 {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-title h1 span {
+    color: #EE3524;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-image {
+    flex: 1 0 200px;
+    height: 200.89px;
+    background-image: url("../images/Rectangle 658 (1).png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-image .playButtonContainer {
+    width: 100;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-image .playButtonContainer .playbutton {
+    width: 55px;
+    height: 55px;
+    background-image: url("../images/Group 35542.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-description {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-description span i {
+    font-size: 50px;
+    color: #EE3524;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-description h3 {
+    text-align: center;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-description p {
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #JoinFbgroup {
+    z-index: 999;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .spacerContainer {
+    width: 100%;
+    height: 90px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container h1 {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container h1 span {
+    color: #EE3524;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-row1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-row1 .joinGroup-image {
+    list-style: none;
+    width: 250px;
+    height: 150px;
+    background-image: url("../images/joinGroup-image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-row1 .joinGroup-image .playButtonContainer {
+    width: 451.84px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-row1 .joinGroup-image .playButtonContainer .playbutton {
+    width: 55px;
+    height: 55px;
+    background-image: url("../images/Group 35542.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph p {
+    font-size: 12px;
+    color: black;
+    opacity: 80%;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul li {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul li .list-image {
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/carbon_condition-point.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul li p {
+    font-size: 12px;
+    color: black;
+    opacity: 80%;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container {
+    display: flex;
+    flex-direction: column;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container h3 {
+    font-size: 18px;
+    color: black;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: black;
+    height: 0;
+    transition: 0.5s ease-in-out;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container p.active {
+    height: 180px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li span {
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+  }
+}
+@media only screen and (min-width: 780px) {
+  body .container main #home {
+    padding: 0 80px;
+    gap: 50px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  body .container main #home .spacerContainer {
+    width: 100%;
+    height: 100px;
+  }
+  body .container main #home #profile {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body .container main #home #profile #imageContainer {
+    flex: 1;
+    background-image: url("../images/05-Joaquin-Revllo-22_0039-Full 1.png");
+    width: 100%;
+    height: 380px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  body .container main #home #profile #profileContent {
+    flex: 1;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  body .container main #home #profile #profileContent h2 {
+    font-weight: 900;
+    font-size: 54px;
+  }
+  body .container main #home #profile #profileContent p {
+    font-size: 25px;
+    line-height: 20px;
+  }
+  body .container main #home #profile #profileContent h2:nth-last-child(2) {
+    line-height: 64px;
+    font-weight: 900;
+    color: white;
+    position: relative;
+    line-height: 77.45px;
+  }
+  body .container main #home #profile #profileContent h2:nth-last-child(2)::after {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: #f7941d;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  body .container main #home #profile #profileContent button {
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    border-radius: 59px;
+    background-color: #EE3524;
+    border: none;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  body .container main #home .commentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 780px;
+    padding: 0 10px;
+    overflow-x: hidden;
+    position: relative;
+  }
+  body .container main #home .commentContainer .cardInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #home .commentContainer .cardInfoContainer .cOmentContainer {
+    display: flex;
+    gap: 10px;
+  }
+  body .container main #home .commentContainer .cardInfoContainer .cOmentContainer .imageContainer {
+    background-image: url("../images/Ellipse 9.png");
+    background-size: contain;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+  }
+  body .container main #home .commentContainer .cardInfoContainer .cOmentContainer .nameContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #home .commentContainer .cardInfoContainer .cOmentContainer .nameContainer p:nth-child(2) {
+    margin-top: -10px;
+    font-size: 12px;
+  }
+  body .container main #home .commentContainer .cardInfoContainer #reviewStars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  body .container main #home .commentContainer .cardInfoContainer #reviewStars li {
+    list-style-type: none;
+    color: #f7941d;
+  }
+  body .container main #home #reviews ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  body .container main #home #reviews ul li {
+    list-style: none;
+    font-size: 25px;
+  }
+  body .container main #home #reviews ul li i {
+    color: #f7941d;
+  }
+  body .container main #home #reviews #reviewContainer {
+    width: 100%;
+  }
+  body .container main #home #reviews #reviewContainer h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    font-family: 900;
+    color: #f7941d;
+  }
+  body .container main #home #reviews #reviewContainer h1 span {
+    height: 100%;
+    font-size: 14px;
+    color: white;
+  }
+  body .container main #home .commentContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  body .container main #home .commentContainer .right-arrow,
+  body .container main #home .commentContainer .left-arrow {
+    display: block;
+    position: absolute;
+    background-color: #F47B20;
+    border-radius: 50%;
+  }
+  body .container main #home .commentContainer .right-arrow i,
+  body .container main #home .commentContainer .left-arrow i {
+    font-size: 60px;
+  }
+  body .container main #home .commentContainer .right-arrow {
+    top: 35%;
+    left: 0;
+  }
+  body .container main #home .commentContainer .left-arrow {
+    top: 35%;
+    right: 0;
+  }
+  body .container main #home .commentContainer .cardInfoContainer {
+    flex: 1 0 364.72px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  body .container main #home .commentContainer .cardInfoContainer .cOmentContainer {
+    display: flex;
+    gap: 10px;
+  }
+  body .container main #home .commentContainer .cardInfoContainer .cOmentContainer .imageContainer {
+    background-image: url("../images/Ellipse 9.png");
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  body .container main #home .commentContainer .cardInfoContainer .cOmentContainer .nameContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #home .commentContainer .cardInfoContainer .cOmentContainer .nameContainer p:nth-child(2) {
+    margin-top: -10px;
+    font-size: 12px;
+  }
+  body .container main #home .commentContainer .cardInfoContainer #reviewStars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  body .container main #home .commentContainer .cardInfoContainer #reviewStars li {
+    list-style-type: none;
+    color: #f7941d;
+  }
+  body .container main #home #outcome {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  body .container main #home #outcome .outcome-countainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #home #outcome .outcome-countainer h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 54px;
+  }
+  body .container main #home #outcome .outcome-countainer #outcomeList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #home #outcome .outcome-countainer #outcomeList li {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    gap: 5px;
+  }
+  body .container main #home #outcome .outcome-countainer #outcomeList li p {
+    border: 3px solid #f7941d;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+  }
+  body .container main #home #outcome .outcome-countainer #outcomeList li p::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #f7941d;
+    position: absolute;
+    border-radius: 50%;
+    top: 14%;
+    left: 15%;
+  }
+  body .container main #home #outcome .outcome-countainer #outcomeList li span {
+    padding-left: 20px;
+    width: 80%;
+    font-size: 20px;
+  }
+  body .container main #home #outcome .outcomeContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  body .container main #home #outcome .outcomeContainer .outComeImage {
+    width: 300px;
+    height: 317.76px;
+    background-image: url("../images/Rectangle 653.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 11px;
+    background-repeat: no-repeat;
+  }
+  body .container main #home #outcome .outcomeContainer .outComeImageDescription {
+    padding: 0 10px;
+  }
+  body .container main #home #outcome .outcomeContainer .outComeImageDescription p {
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+  }
+  body .container main #home #outcome .outcomeContainer .outComeImageDescription p span {
+    font-size: 35px;
+    color: #f7941d;
+  }
+  body .container main #home #trainingInclude {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 10px;
+  }
+  body .container main #home #trainingInclude h1 {
+    text-align: center;
+    font-size: 54px;
+    width: 100%;
+    height: 100px;
+  }
+  body .container main #home #trainingInclude h1 span {
+    color: #f7941d;
+  }
+  body .container main #home #trainingInclude .trainingContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+  body .container main #home #trainingInclude .trainingContainer .trainingImage {
+    background-image: url("../images/image_18__1_-removebg-preview 1.png");
+    width: 615.02px;
+    height: 332.39px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  body .container main #home #trainingInclude .trainingContainer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 60px;
+  }
+  body .container main #home #trainingInclude .trainingContainer ul li {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  body .container main #home #trainingInclude .trainingContainer ul li p {
+    border: 3px solid #f7941d;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+  }
+  body .container main #home #trainingInclude .trainingContainer ul li p::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #f7941d;
+    position: absolute;
+    border-radius: 50%;
+    top: 14%;
+    left: 15%;
+  }
+  body .container main #home #trainingInclude .trainingContainer ul li span {
+    font-size: 12px;
+    width: 80%;
+  }
+  body .container main #bonuses {
+    width: 100%;
+    background-color: white;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #bonuses #bonusTitle {
+    padding: 0 10px;
+    width: 100%;
+    height: 65px;
+    color: black;
+    font-weight: 800;
+    font-size: 54px;
+    text-align: center;
+  }
+  body .container main #bonuses #bonusTitle span {
+    color: #EE3524;
+  }
+  body .container main #bonuses .bonusesContainers {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 20px;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider {
+    width: 786px;
+    height: 194.88px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col1 h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(39, 38, 38);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col1 h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    color: rgb(39, 38, 38);
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col2 h1 {
+    text-align: left;
+    color: #EE3524;
+    font-size: 18px;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col2 h1 span {
+    color: black;
+  }
+  body .container main #bonuses .bonusesContainers .bonusesDevider .col2 p {
+    font-size: 20px;
+    color: #000000;
+    opacity: 70%;
+    padding: 0 10px;
+    line-height: 15px;
+  }
+  body .container main #educational {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    position: relative;
+    padding: 0 100px;
+  }
+  body .container main #educational .seal-container {
+    width: 100%;
+    height: 343.89px;
+    position: absolute;
+    top: -155px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  body .container main #educational .imageSeal {
+    width: 358.82px;
+    height: 343.89px;
+    background-image: url("../images/logo seal-02 1.png");
+    background-size: contain;
+  }
+  body .container main #educational .spacerContainer {
+    width: 100%;
+    height: 200px;
+  }
+  body .container main #educational .EducationalTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 195px;
+  }
+  body .container main #educational .EducationalTitle h1 {
+    text-align: center;
+    font-size: 54px;
+    font-weight: 800;
+  }
+  body .container main #educational .EducationalTitle h1 span {
+    color: #F47B20;
+  }
+  body .container main #educational .IamJoaquin {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  body .container main #educational .IamJoaquin .joaquinPar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  body .container main #educational .IamJoaquin .joaquinPar p {
+    font-size: 20px;
+  }
+  body .container main #educational .IamJoaquin .joaquinImage {
+    flex: 1;
+    background-image: url("../images/image 24.png");
+    width: 582px;
+    height: 479.66px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  body .container main #educational .monthsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 50px;
+  }
+  body .container main #educational .monthsContainer .monthsContainer2 {
+    display: flex;
+    gap: 40px;
+  }
+  body .container main #educational .monthsContainer .monthsContainer2 .iconContainer .iconImage {
+    width: 57px;
+    height: 58px;
+    background-image: url("../images/Icon.png");
+    background-size: cover;
+  }
+  body .container main #educational .monthsContainer .monthsContainer2 .monthsTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #educational .monthsContainer .monthsContainer2 .monthsTitle h1 {
+    font-size: 32px;
+  }
+  body .container main #educational .monthsContainer .monthsContainer2 .monthsTitle p {
+    font-size: 20px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #educational .monthsContainer button {
+    color: white;
+    font-size: 16px;
+    width: 183.67px;
+    height: 51px;
+    background-color: #EE3524;
+    border-radius: 65px;
+    outline: none;
+    border: none;
+  }
+  body .container main #educational .commentContainer {
+    overflow-x: hidden;
+    width: 780px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
+    position: relative;
+  }
+  body .container main #educational .commentContainer .right-arrow,
+  body .container main #educational .commentContainer .left-arrow {
+    display: block;
+    position: absolute;
+    background-color: #F47B20;
+    border-radius: 50%;
+  }
+  body .container main #educational .commentContainer .right-arrow i,
+  body .container main #educational .commentContainer .left-arrow i {
+    font-size: 60px;
+  }
+  body .container main #educational .commentContainer .right-arrow {
+    top: 35%;
+    left: 0;
+  }
+  body .container main #educational .commentContainer .left-arrow {
+    top: 35%;
+    right: 0;
+  }
+  body .container main #educational .commentContainer .cardInfoContainer {
+    flex: 1 0 364.72px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  body .container main #educational .commentContainer .cardInfoContainer .cOmentContainer {
+    display: flex;
+    gap: 10px;
+  }
+  body .container main #educational .commentContainer .cardInfoContainer .cOmentContainer .imageContainer {
+    background-image: url("../images/Ellipse 9.png");
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  body .container main #educational .commentContainer .cardInfoContainer .cOmentContainer .nameContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #educational .commentContainer .cardInfoContainer .cOmentContainer .nameContainer p:nth-child(2) {
+    margin-top: -10px;
+    font-size: 12px;
+  }
+  body .container main #educational .commentContainer .cardInfoContainer #reviewStars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  body .container main #educational .commentContainer .cardInfoContainer #reviewStars li {
+    list-style-type: none;
+    color: #f7941d;
+  }
+  body .container main #trainings {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 10px;
+    background-color: white;
+    color: black;
+    padding-bottom: 20px;
+  }
+  body .container main #trainings .spacerContainer {
+    width: 100%;
+    height: 90px;
+  }
+  body .container main #trainings .title-heading {
+    font-size: 54px;
+    text-align: center;
+  }
+  body .container main #trainings .title-heading span {
+    color: #EE3524;
+  }
+  body .container main #trainings .trainingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  body .container main #trainings .trainingContainer .inputName {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  body .container main #trainings .trainingContainer .inputName input {
+    width: 290px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  body .container main #trainings .trainingContainer .inputName button {
+    width: 154px;
+    height: 51px;
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    background-color: #EE3524;
+    outline: none;
+    border-radius: 59px;
+    font-weight: 700;
+    border: none;
+  }
+  body .container main #trainings .planActiveContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 500px;
+    align-items: end;
+    justify-content: center;
+  }
+  body .container main #trainings .planActiveContainer .planContainer {
+    width: 323.61px;
+    height: 401px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #EE3524;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+  body .container main #trainings .planActiveContainer .planContainer .planTitle {
+    font: 26px;
+  }
+  body .container main #trainings .planActiveContainer .planContainer .planDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  body .container main #trainings .planActiveContainer .planContainer .planDescriptionContainer p {
+    text-align: center;
+  }
+  body .container main #trainings .planActiveContainer .planContainer .planDescriptionContainer .col2Plan {
+    color: #EE3524;
+  }
+  body .container main #trainings .planActiveContainer .planContainer .planDescriptionContainer .col2Plan span {
+    color: black;
+  }
+  body .container main #trainings .planActiveContainer .planContainer .planDescriptionContainer button {
+    width: 140px;
+    height: 51px;
+    color: white;
+    border-radius: 59px;
+    background-color: #EE3524;
+    outline: none;
+    border: none;
+  }
+  body .container main #trainings .planActiveContainer .planContainer:nth-child(2) {
+    position: relative;
+    border: 1px dashed #EE3524;
+    align-self: flex-start;
+  }
+  body .container main #trainings .planActiveContainer .planContainer:nth-child(2) .planTitle {
+    position: absolute;
+    top: -20px;
+    border: 1px solid #EE3524;
+    padding: 10px;
+    isolation: isolate;
+  }
+  body .container main #trainings .planActiveContainer .planContainer:nth-child(2) .planTitle::after {
+    content: "";
+    inset: 0;
+    background-color: white;
+    position: absolute;
+    z-index: -1;
+  }
+  body .container main #trainings .paymentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  body .container main #trainings .paymentContainer h1 {
+    color: black;
+    font-weight: 800;
+    font-size: 35px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo {
+    width: 719px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo h4 {
+    color: black;
+    font-weight: 800;
+    font-size: 25px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass {
+    display: flex;
+    gap: 10px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass li {
+    border: 1px solid black;
+    width: 163px;
+    height: 40.3px;
+    list-style: none;
+    border-radius: 8px;
+    padding: 2px 10px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass li p {
+    font-size: 8px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass li:nth-child(1) .iconContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass li:nth-child(1) .iconContainer div {
+    width: 22px;
+    height: 22px;
+    background-image: url("../images/credit-card 1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass li:nth-child(2) .iconContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass li:nth-child(2) .iconContainer div {
+    width: 22px;
+    height: 22px;
+    background-image: url("../images/image 30.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass li:nth-child(3) .iconContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass li:nth-child(3) .iconContainer div {
+    width: 22px;
+    height: 22px;
+    background-image: url("../images/Rectangle 656.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass li:nth-last-child(1) {
+    width: 48.18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo #cardsclass li:nth-last-child(1) div {
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    border-radius: 50%;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .cardInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .cardInput .inputCardinfo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 55px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 3px;
+    gap: 10px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .cardInput .inputCardinfo input {
+    border: none;
+    outline: none;
+    font-size: 12px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .cardInput .inputCardinfo .cardsoffers {
+    width: 100px;
+    height: 15px;
+    background: url("../images/banks.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .row2cardInput {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .row2cardInput .row2input {
+    display: flex;
+    flex-direction: column;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .row2cardInput .row2input label {
+    font-size: 16px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .row2cardInput .row2input input {
+    width: 100%;
+    height: 55px;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 10px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .row2cardInput .inputCardinfo {
+    display: flex;
+    flex-direction: column;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .row2cardInput .inputCardinfo label {
+    font-size: 16px;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .row2cardInput .inputCardinfo ul {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    align-items: center;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .row2cardInput .inputCardinfo ul li {
+    list-style: none;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .row2cardInput .inputCardinfo ul input {
+    width: 100%;
+    height: 55px;
+    border-radius: 8px;
+    font-size: 12px;
+    padding: 10px;
+    border: none;
+    outline: none;
+  }
+  body .container main #trainings .paymentContainer #cardInfo .row2cardInput .inputCardinfo ul li:nth-child(2) {
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/credit-card 1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  body .container main #trainings .paymentContainer #cardInfo button {
+    width: 154px;
+    height: 51px;
+    border-radius: 59px;
+    background-color: #EE3524;
+    color: white;
+    border: none;
+    outline: none;
+  }
+  body .container main #comnunity {
+    display: flex;
+    flex-direction: column;
+    gap: 60ox;
+    padding: 0 100px;
+  }
+  body .container main #comnunity .spacerContainer {
+    width: 100%;
+    height: 100px;
+  }
+  body .container main #comnunity .comnunityTitle h1 {
+    font-size: 54px;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+  }
+  body .container main #comnunity .comnunityTitle h1 span {
+    color: #EE3524;
+  }
+  body .container main #comnunity .row1-container {
+    display: flex;
+    flex-direction: column;
+    gap: px;
+  }
+  body .container main #comnunity .row1-container .row1 {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1-image-profile {
+    width: 451.84px;
+    height: 306.89px;
+    background-image: url("../images/Rectangle 658.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    isolation: isolate;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1-image-profile .playButtonContainer {
+    width: 451.84px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1-image-profile .playButtonContainer .playButtonContainer {
+    width: 451.84px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1-image-profile .playButtonContainer .playButtonContainer .playbutton {
+    width: 150px;
+    height: 150px;
+    background-image: url("../images/Group 35542.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1-image-profile::after {
+    content: "";
+    background-color: white;
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    z-index: -1;
+    top: 25%;
+    left: 37%;
+    border-radius: 50%;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List {
+    max-width: 515px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(1) .li-image {
+    width: 53.82px;
+    height: 53.82px;
+    background: url("../images/Ellipse 782 (1).png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(1) .li-name p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(1) .li-name span {
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(2) {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(2) ul {
+    display: flex;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(2) ul li {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(2) ul li i {
+    color: #EE3524;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(3) {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1 .row1Sam .row1List li:nth-child(3) p {
+    font-size: 16px;
+    color: white;
+    opacity: 80%;
+    line-height: 25px;
+  }
+  body .container main #comnunity .row1-container .row1-col1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1-image-profile {
+    width: 451.84px;
+    height: 306.89px;
+    background-image: url("../images/Rectangle 659.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    isolation: isolate;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1-image-profile .playButtonContainer {
+    width: 451.84px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1-image-profile .playButtonContainer .playbutton {
+    width: 55px;
+    height: 55px;
+    background-image: url("../images/Group 35542.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(1) .li-image {
+    width: 53.82px;
+    height: 53.82px;
+    background: url("../images/Ellipse 782.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(1) .li-name p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(1) .li-name span {
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(2) {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(2) ul {
+    margin-top: -10px;
+    display: flex;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(2) ul li {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(2) ul li i {
+    color: #EE3524;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(3) {
+    list-style: none;
+  }
+  body .container main #comnunity .row1-container .row1-col1 .row1Nahs .row1List li:nth-child(3) p {
+    font-size: 16px;
+    line-height: 25px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row2 {
+    width: 100%;
+    padding: 0 10px;
+  }
+  body .container main #comnunity .row2 ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(1) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(1) .row2-li-image {
+    width: 104.13px;
+    height: 104.13px;
+    background-image: url("../images/row2-image.png");
+    background-size: contain;
+    list-style-type: none;
+    background-repeat: no-repeat;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(1) p {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: white;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(1) p:nth-child(3) {
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(2) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(2) .row2-li-image {
+    width: 104.13px;
+    height: 104.13px;
+    background-image: url("../images/Ellipse 782 (2).png");
+    background-size: contain;
+    list-style-type: none;
+    background-repeat: no-repeat;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(2) p {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: white;
+  }
+  body .container main #comnunity .row2 ul li:nth-child(2) p:nth-child(3) {
+    font-size: 12px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row3 .row3-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .container main #comnunity .row3 .row3-title h3 {
+    font-size: 28px;
+    font-weight: 800;
+  }
+  body .container main #comnunity .row3 .row3-title p {
+    font-size: 16px;
+    color: white;
+    opacity: 80%;
+    line-height: 24px;
+  }
+  body .container main #comnunity .row3 .row3-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  body .container main #comnunity .row3 .row3-paragraph p {
+    text-align: center;
+    line-height: 18px;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row4 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  body .container main #comnunity .row4 h1 {
+    text-align: center;
+    font-size: 54px;
+  }
+  body .container main #comnunity .row4 h1 span {
+    color: orange;
+  }
+  body .container main #comnunity .row4 .row4-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-col1 {
+    flex-direction: row;
+    gap: 40px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-col1 .row4-image {
+    flex: 1;
+    width: 451.84px;
+    height: 552.78px;
+    background-image: url("../images/Rectangle 660.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-col1 .row4-paragraph {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-col1 .row4-paragraph h3 {
+    text-align: center;
+    font-size: 32px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-col1 .row4-paragraph p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    opacity: 80%;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments {
+    list-style: none;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .right-arrow,
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .left-arrow {
+    display: block;
+    position: absolute;
+    background-color: #F47B20;
+    border-radius: 50%;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .right-arrow i,
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .left-arrow i {
+    font-size: 60px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .right-arrow {
+    top: 35%;
+    left: 0;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .left-arrow {
+    top: 35%;
+    right: 0;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer {
+    flex: 1 0 364.72px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer .cOmentContainer {
+    display: flex;
+    gap: 10px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer .cOmentContainer .imageContainer {
+    background-image: url("../images/Ellipse 9.png");
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer .cOmentContainer .nameContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer .cOmentContainer .nameContainer p:nth-child(2) {
+    margin-top: -10px;
+    font-size: 12px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer #reviewStars {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  body .container main #comnunity .row4 .row4-container .row4-comments .commentContainer .cardInfoContainer #reviewStars li {
+    list-style-type: none;
+    color: #f7941d;
+  }
+  body .container main #comnunity .row5 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #comnunity .row5 .row5-container {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-title h1 {
+    font-size: 20px;
+    font-weight: 800;
+    font-size: 54px;
+    text-align: center;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-title h1 span {
+    color: #EE3524;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-image {
+    flex: 1 0 451.84px;
+    height: 306.89px;
+    background-image: url("../images/Rectangle 658 (1).png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-image .playButtonContainer {
+    width: 100;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-image .playButtonContainer .playbutton {
+    width: 55px;
+    height: 55px;
+    background-image: url("../images/Group 35542.png");
+    background-size: cover;
+    z-index: 1;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-description {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-description span i {
+    font-size: 50px;
+    color: #EE3524;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-description h3 {
+    text-align: center;
+  }
+  body .container main #comnunity .row5 .row5-container .row5-description p {
+    text-align: left;
+    font-size: 16px;
+    color: white;
+    line-height: 24px;
+    opacity: 80%;
+  }
+  body .container main #JoinFbgroup {
+    z-index: 999;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 160px;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .spacerContainer {
+    width: 100%;
+    height: 90px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container h1 {
+    text-align: center;
+    color: black;
+    font-size: 54px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container h1 span {
+    color: #EE3524;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-row1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-row1 .joinGroup-image {
+    flex: 1;
+    list-style: none;
+    width: 485px;
+    height: 329.42px;
+    background-image: url("../images/joinGroup-image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-row1 .joinGroup-image .playbutton {
+    width: 55px;
+    height: 55px;
+    background-image: url("../images/Group 35542.png");
+    background-size: contain;
+    z-index: 1;
+    position: absolute;
+    top: 25%;
+    left: 37%;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph p {
+    font-size: 16px;
+    color: black;
+    opacity: 80%;
+    line-height: 24px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul li {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: start;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul li .list-image {
+    width: 32px;
+    height: 32px;
+    background-image: url("../images/carbon_condition-point.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-row-container .joinGroup-paragraph ul li p {
+    font-size: 12px;
+    color: black;
+    opacity: 80%;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 0 60px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container {
+    display: flex;
+    flex-direction: column;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container h3 {
+    font-size: 18px;
+    color: black;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: black;
+    height: 0;
+    transition: 0.5s ease-in-out;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li .accordion-container p.active {
+    height: 180px;
+  }
+  body .container main #JoinFbgroup .joinGroup-container .joinGroup-accordion ul li span {
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  body footer {
+    position: relative;
+    isolation: isolate;
+    border: black;
+    outline: black;
+  }
+  body footer svg {
+    width: 2200px;
+    position: absolute;
+    top: -119px;
+    z-index: -1;
+    transform: translateX(-220px);
+  }
+  body footer .footer-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: black;
+  }
+  body footer .footer-container .footer-logo .logo-footer {
+    width: 148px;
+    height: 148px;
+    background-image: url("../images/Grizzly Smaller (1) 2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  body footer .footer-container p {
+    text-align: center;
+    font-size: 16px;
+  }
+  body footer .footer-container span {
+    color: #F47B20;
+  }
+  body footer .footer-container ul {
+    display: flex;
+    gap: 20px;
+  }
+  body footer .footer-container ul li {
+    list-style: none;
+  }
+  body footer .footer-container ul li p {
+    font-size: 12px;
+  }
+  body footer .footer-socials {
+    padding: 0 10px;
+    padding-top: 40px;
+    border-top: 1px solid #F47B20;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  body footer .footer-socials ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  body footer .footer-socials ul li {
+    list-style: none;
+  }
+  body footer .footer-socials ul li i {
+    font-size: 16px;
+    color: #F47B20;
+  }
+  body footer .footer-socials p {
+    color: white;
+    opacity: 80%;
+  }
 }/*# sourceMappingURL=index.css.map */

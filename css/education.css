@@ -5,14 +5,20 @@
   position: relative;
   padding: 0 10px;
 }
+#educational .seal-container {
+  width: 100%;
+  height: 343.89px;
+  position: absolute;
+  top: -75px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
 #educational .imageSeal {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   background-image: url("../images/logo seal-02 1.png");
   background-size: contain;
-  position: absolute;
-  top: -50px;
-  left: 70px;
 }
 #educational .spacerContainer {
   width: 100%;
@@ -73,7 +79,6 @@
 #educational .monthsContainer .monthsContainer2 .monthsTitle {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
   gap: 10px;
 }
 #educational .monthsContainer .monthsContainer2 .monthsTitle h1 {
@@ -98,6 +103,10 @@
   gap: 10px;
   width: 100%;
   padding: 0 10px;
+}
+#educational .commentContainer .right-arrow,
+#educational .commentContainer .left-arrow {
+  display: none;
 }
 #educational .commentContainer .cardInfoContainer {
   display: flex;

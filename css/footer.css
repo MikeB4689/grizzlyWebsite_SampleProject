@@ -1,12 +1,14 @@
 footer {
   position: relative;
   isolation: isolate;
+  border: black;
+  outline: black;
 }
 footer svg {
-  width: 680px;
+  width: 1200px;
   position: absolute;
-  top: -720px;
-  z-index: 1;
+  top: -119px;
+  z-index: -1;
   transform: translateX(-220px);
 }
 footer .footer-container {
@@ -17,6 +19,8 @@ footer .footer-container {
   gap: 20px;
   align-items: center;
   justify-content: center;
+  border: none;
+  outline: black;
 }
 footer .footer-container .footer-logo .logo-footer {
   width: 148px;

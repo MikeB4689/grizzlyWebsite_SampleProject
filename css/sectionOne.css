@@ -1,14 +1,18 @@
 main {
+  position: relative;
   width: 100%;
 }
 main #home {
   overflow-x: hidden;
-  padding-top: 100px;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 40px;
   height: auto;
+}
+main #home .spacerContainer {
+  width: 100%;
+  height: 100px;
 }
 main #home #profile {
   width: 100%;
@@ -19,27 +23,27 @@ main #home #profile {
 main #home #profile #imageContainer {
   background-image: url("../images/05-Joaquin-Revllo-22_0039-Full 1.png");
   width: 100%;
-  height: 400px;
+  height: 380px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
 }
 main #home #profile #profileContent {
+  gap: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 main #home #profile #profileContent h2 {
-  font-size: 25px;
   font-weight: 900;
+  font-size: 20px;
 }
 main #home #profile #profileContent p {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
 }
 main #home #profile #profileContent h2:nth-last-child(2) {
   line-height: 40px;
-  font-size: 25px;
   font-weight: 900;
   color: white;
   position: relative;
@@ -102,10 +106,15 @@ main #home .commentContainer {
   width: 100%;
   padding: 0 10px;
 }
+main #home .commentContainer .right-arrow,
+main #home .commentContainer .left-arrow {
+  display: none;
+}
 main #home .commentContainer .cardInfoContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  padding: 0 10px;
 }
 main #home .commentContainer .cardInfoContainer .cOmentContainer {
   display: flex;
@@ -114,8 +123,8 @@ main #home .commentContainer .cardInfoContainer .cOmentContainer {
 main #home .commentContainer .cardInfoContainer .cOmentContainer .imageContainer {
   background-image: url("../images/Ellipse 9.png");
   background-size: contain;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
 main #home .commentContainer .cardInfoContainer .cOmentContainer .nameContainer {
@@ -139,32 +148,39 @@ main #home .commentContainer .cardInfoContainer #reviewStars li {
 main #home #outcome {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
-main #home #outcome h1 {
+main #home #outcome .outcome-countainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main #home #outcome .outcome-countainer h1 {
   text-align: center;
   font-weight: 900;
 }
-main #home #outcome ul {
+main #home #outcome .outcome-countainer #outcomeList {
   display: flex;
   flex-direction: column;
-  padding: 0 10px;
   gap: 20px;
 }
-main #home #outcome ul li {
+main #home #outcome .outcome-countainer #outcomeList li {
   list-style: none;
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  gap: 5px;
 }
-main #home #outcome ul li p {
+main #home #outcome .outcome-countainer #outcomeList li p {
   border: 3px solid #f7941d;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   position: relative;
 }
-main #home #outcome ul li p::after {
+main #home #outcome .outcome-countainer #outcomeList li p::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -174,9 +190,10 @@ main #home #outcome ul li p::after {
   top: 14%;
   left: 15%;
 }
-main #home #outcome ul li span {
+main #home #outcome .outcome-countainer #outcomeList li span {
+  padding-left: 20px;
   width: 80%;
-  font-size: 12px;
+  font-size: 10px;
 }
 main #home #outcome .outcomeContainer {
   display: flex;
@@ -187,11 +204,12 @@ main #home #outcome .outcomeContainer {
 }
 main #home #outcome .outcomeContainer .outComeImage {
   width: 100%;
-  height: 317.76px;
+  height: 200px;
   background-image: url("../images/Rectangle 653.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   border-radius: 11px;
+  background-repeat: no-repeat;
 }
 main #home #outcome .outcomeContainer .outComeImageDescription {
   padding: 0 10px;
@@ -208,10 +226,12 @@ main #home #outcome .outcomeContainer .outComeImageDescription p span {
 main #home #trainingInclude {
   display: flex;
   flex-direction: column;
+  gap: 20;
+  padding: 0 10px;
 }
 main #home #trainingInclude h1 {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   width: 100%;
   height: 100px;
 }
@@ -226,16 +246,13 @@ main #home #trainingInclude .trainingContainer {
 main #home #trainingInclude .trainingContainer .trainingImage {
   background-image: url("../images/image_18__1_-removebg-preview 1.png");
   width: 100%;
-  height: 190px;
+  height: 180px;
   background-size: contain;
   background-repeat: no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 main #home #trainingInclude .trainingContainer ul {
   display: flex;
   flex-direction: column;
-  padding: 0 10px;
   gap: 20px;
   padding-bottom: 60px;
 }
